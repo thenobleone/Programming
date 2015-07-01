@@ -1,1 +1,0 @@
-Creation of a repo for classwork and group assignments with individual courses set at branches
