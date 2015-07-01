@@ -1,5 +1,6 @@
 #File: chaosPratice.py
-#A simple program illustrating chaotic behaviour
+#tester file for the various modifications to the base chaos.py script used in Chapter 1
+# Created by Jo Narvaez-Jensen
 
 def main ():
     print("This program illustrates a chaotic function")

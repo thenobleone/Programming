@@ -1,5 +1,6 @@
 #File: chaos.py
 #A simple program illustrating chaotic behaviour
+#basic program from Chapter 1
 
 def main ():
     print("This program illustrates a chaotic function")

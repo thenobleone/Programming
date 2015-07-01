@@ -1,5 +1,8 @@
-#File: chaos-modified.py
-#A simple program illustrating chaotic behaviour
+#File: chaosModified.py
+#Self project to take the end of Chatper 1 programing practice work and more them into a single working program
+#Future modifications to include giving the user the option to return and try more options and creation of an exiting message.
+# Created by Jo Narvaez-Jensen
+
 
 def main ():
     print ("""
