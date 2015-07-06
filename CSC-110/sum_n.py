@@ -2,15 +2,23 @@
 #Created by Jo Narvaez-Jensen
 #Project 1C
 
-def main ():
+def calculate ():
     total = 0
 
-    print ("The Gauss Calculator")
     cycles = eval (input ("Starting at 1, how many whole numbers do you want to add together? "))
 
     for start in range (cycles + 1):
-        total = total + start
-        if total != 0:
-            print (total)
+        if start <= cycles:
+            total = total + start
+
+    return count (total)
+
+def count (total):
+    print ("The grand sum is: ", total)
+
+
+def main ():
+    print ("The Gauss Calculator")
+    calculate ()
 
 main()
