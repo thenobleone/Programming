@@ -2,23 +2,25 @@
 #Created by Jo Narvaez-Jensen
 #Project 1C
 
-def calculate ():
+#program design to take an input (cycles) from the user.
+#   then calcuate it's sum
+#   and output the final results
+
+def main ():
     total = 0
 
-    cycles = eval (input ("Starting at 1, how many whole numbers do you want to add together? "))
+    # Welcome message
+    print ("The Gauss Calculator")
 
+    # Prompt user input for number to times they want to run (cycles)
+    cycles = eval (input ("Starting at 1, how many natural numbers do you want to add together? "))
+
+    #definite loop to calcuate the sum of the users request
     for start in range (cycles + 1):
         if start <= cycles:
             total = total + start
 
-    return count (total)
-
-def count (total):
-    print ("The grand sum is: ", total)
-
-
-def main ():
-    print ("The Gauss Calculator")
-    calculate ()
+    #output the final sum (total) to the user
+    print ("Final Sum: ", total)
 
 main()
