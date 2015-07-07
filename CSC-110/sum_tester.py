@@ -9,10 +9,10 @@ def main ():
 
     cycles = eval (input ("Starting at 1, how many whole numbers do you want to add together? "))
 
-    for start in range (cycles + 1):
+    for start in range (cycles):
         if start <= cycles:
             total = total + start
 
-    print ("Grand Sum Total: ",total)
+    print ("Grand Sum Total: ", total)
 
 main()
