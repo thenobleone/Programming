@@ -17,7 +17,7 @@ def options ():
             Enter 7 to use formula C
             Enter 8 to compare two numbers
         """)
-    choice = int (input ("Which version of Chaos do you want: "))
+    choice = int (input ("Which version of Chaos do you want (1 - 8): "))
     return chaos(choice)
 
 #function designed to determine which choice the user makes and carry out the desired test
@@ -36,6 +36,7 @@ def chaos (choice):
         for i in range(10):
             x = 2.0 * x * (1 - x)
             print (x)
+
 
 #promts the user for a decimal number and then outputs then evaluation of 20 results based on the original formula
     elif choice == 3:
