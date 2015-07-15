@@ -18,7 +18,6 @@ def main ():
     oShape = Oval (p1, p2)
     oShape.setOutline ("green")
     oShape.setFill ("green")
-    
 
     rShape.draw (display)
     oShape.draw (display)
