@@ -1,6 +1,5 @@
 # tempConvert.py
 # Created by Jo Narvaez-Jensen
-
 # this program allows a user to convert temperatures between Celcius and Fahrenheit
 
 import sys
