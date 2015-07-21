@@ -1,5 +1,5 @@
 # shapes.py
-# Created by Jo Narvaez-Jense
+# Created by Jo Narvaez-Jensen
 # Project 2A
 # create a window that disples 5 shapes (rectangle, oval, triangle, circle, square) with 50px of space in between each spaace (2 rows, 2 on top, 3 on the bottom) with a boundary width of 5px.
 
