@@ -34,6 +34,7 @@ def main ():
             time.sleep (.025)
 
 
+# FUNCTIONS CHAPTER 7!!
 
 
 main ()

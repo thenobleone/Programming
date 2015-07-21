@@ -1,58 +1,65 @@
 # shapes.py
 # Created by Jo Narvaez-Jense
 # Project 2A
-# create a window that disples 5 shapes (rectangle, oval, triangle, circle, square) with 50px of space in between each spaace (2 rows, 2 on top, 3 on the bottom) with a boundary width of 5px
+# create a window that disples 5 shapes (rectangle, oval, triangle, circle, square) with 50px of space in between each spaace (2 rows, 2 on top, 3 on the bottom) with a boundary width of 5px.
 
 from graphics import *
 
-def drawRectangle (rShape):
+def drawRectangle (window):
     rp1 = Point (50, 350)
-    rp2 = Point (275, 225)
-
+    rp2 = Point (250, 250)
     rShape = Rectangle (rp1, rp2)
     rShape.setFill ("red")
-    drawDisplay(rShape)
+    rShape.setOutline ("orange")
+    rShape.setWidth (5)
+    rShape.draw (window)
 
-def drawOval (oShape):
-    op1= Point (325, 350)
-    op2 = Point (550, 225)
-
-    oShape = Rectangle (op1, op2)
+def drawOval (window):
+    op1= Point (350, 350)
+    op2 = Point (550, 250)
+    oShape = Oval (op1, op2)
     oShape.setFill ("blue")
-    rdrawDisplay(oShape)
+    oShape.setOutline ("purple")
+    oShape.setWidth (5)
+    oShape.draw (window)
 
-def drawTriangle (tShape):
-    tp1 = Point (100, 175)
+def drawTriangle (window):
+    tp1 = Point (100, 150)
     tp2 = Point (50, 50)
-    tp3 = Point (175, 50)
-
-    tShape = Triangle (tp1, tp2, tp3)
+    tp3 = Point (150, 50)
+    tShape = Polygon (tp1, tp2, tp3)
     tShape.setFill ("green")
-    drawDisplay(tShape)
+    tShape.setOutline ("blue")
+    tShape.setWidth (5)
+    tShape.draw (window)
 
-def drawCircle (cShape):
+def drawCircle (window):
     cp1 = Point (300, 100)
-
-    cShape = Cirlce (cp1, 75)
+    cShape = Circle (cp1, 50)
     cShape.setFill ("yellow")
-    drawDisplay(cShape)
+    cShape.setOutline ("green")
+    cShape.setWidth (5)
+    cShape.draw (window)
 
-def drawSquare (sShape):
-    sp1 = Point (425, 175)
+def drawSquare (window):
+    sp1 = Point (450, 150)
     sp2 = Point (550, 50)
-
-    sShape = Rectangle (sp1, sp1)
-    sShape.setFill ("purple")
-    drawDisplay(sShape)
-
-
-def drawDisplay ():
-    .draw (window)
+    sShape = Rectangle (sp1, sp2)
+    sShape.setFill ("black")
+    sShape.setOutline ("purple")
+    sShape.setWidth (5)
+    sShape.draw (window)
 
 def main ():
     window = GraphWin ("Shapes", 600, 400)
-    window.setCoords(0,0, 1000,1000)
-    drawDisplay ()
+    window.setCoords(0, 0, 600, 400)
+    window.setBackground ("LightBlue4")
+
+    drawRectangle (window)
+    drawOval (window)
+    drawTriangle (window)
+    drawCircle (window)
+    drawSquare (window)
 
 
 main ()
