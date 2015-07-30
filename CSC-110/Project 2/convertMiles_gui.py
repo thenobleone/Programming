@@ -1,5 +1,7 @@
-# covertmilesGraphic.py
+# convertMiles_gui.py
 # Created by Jo Narvaez-Jensen
+# Project 2B
+
 # This program converts distance in miles (inputed by user) into kilometeres
 #   using a graphic window
 
