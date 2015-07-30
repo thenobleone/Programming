@@ -4,31 +4,40 @@
 
 import sys
 
-def pick ():
-    print ("""
-        Choose Option 1 to convert Celsius to Fahrenheit
-        Choose Option 2 to convert Fahrenheit to Celsuis
-        """)
-    option = eval (input ("Which option would you like: "))
-    whichTemp (option)
+def repeat ():
+    contd = input ("\nWould you like to convert another temperature (Y/N)? ")
 
-def whichTemp (option):
-    if option == 1:
-        celsius ()
-    elif option == 2:
-        fahrenheit ()
+    if contd.upper () == 'YES':
+        contd = 'Y'
+    try:
+        while contd.upper () == "Y":
+            print ("")
+            return pick ()
+        else:
+            print ("\nGoodbye!\n")
+    except:
+        print ("Sorry, that answer didn't make sense to me, please try again.")
+        return repeat ()
+
+def error (code):
+    if code == 1:
+        print ("Sorry, that's not a valid option, please try again.\n")
+        pick ()
     else:
-        print ("That is not a valid option.")
-        return pick ()
+        print ("Sorry, that's not a valid temperature.\n")
+        if code == 2:
+            celsius ()
+        elif code == 3:
+            fahrenheit ()
 
 def celsius ():
     try:
         cTemp = eval (input ("Please enter the Celsuis you wish to convert: "))
-        temp = (5/9 * cTemp) - 32
+        temp = (5/9 * cTemp) + 32
         print (cTemp, "˚ Celsuis converts to ", round (temp, 2), "˚ Fahrenheit.", sep ="")
         repeat ()
     except:
-        error (1)
+        return error (2)
 
 def fahrenheit ():
     try:
@@ -37,27 +46,25 @@ def fahrenheit ():
         print (fTemp, "˚ Fahrenheit converts to ", round (temp, 2), "˚ Celsius", sep ="")
         repeat ()
     except:
-        return error (2)
+        return error (3)
 
-def repeat ():
-    contd = input ("Would you like to convert another temperature (Y/N)? ")
+def pick ():
+    print ("Choose Option 1 to convert Celsius to Fahrenheit")
+    print ("Choose Option 2 to convert Fahrenheit to Celsuis\n")
 
-    while contd.upper () == 'Y':
-        return pick ()
-    print ("Goodbye")
-
-def error (temp):
-    print ("Not a valid temperature.")
-
-    if temp == 1:
-        return celsius ()
-    else:
-        return fahrenheit ()
+    try:
+        option = eval (input ("Which option would you like: "))
+        if option == 1:
+            celsius ()
+        elif option == 2:
+            fahrenheit ()
+        else:
+            return error (1)
+    except:
+        return error (1)
 
 def main ():
-    print("""
-        Welcome to Temperature Converter!
-        """)
+    print("\nWelcome to the Temperature Converter!\n")
     pick ()
 
 main ()
