@@ -12,7 +12,7 @@ def printResults (dna, where, howMany):
     print ("They can be found at {0}.".format (', '.join (str (i) for i in where)))
 
 # Gets the # of times the search string appeared
-def numOfOccurance (locationList):
+def findNumOccurance (locationList):
     numAppear = len (locationList)
     return numAppear
 
@@ -36,15 +36,15 @@ def setData ():
     readFile = open ('motifFinding.txt', 'r')
     fileList = readFile.read ().rstrip (). split ('\n')
 
-    fieldSearched, searchTerm = fileList [0], fileList [1]
+    field, search = fileList [0], fileList [1]
 
-    return fieldSearched, searchTerm
+    return field, search
 
 # Handles the running of all funcations and passage of parameters.
 def main ():
-    fieldSearched, searchTerm = setData ()
-    locationList = finder (fieldSearched, searchTerm)
-    numAppear = numOfOccurance (locationList)
+    fieldToSearch, searchTerm = setData ()
+    locationList = finder (fieldToSearch, searchTerm)
+    numAppear = findNumOccurance (locationList)
     printResults (searchTerm, locationList, numAppear)
 
 main ()
